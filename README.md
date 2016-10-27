@@ -23,9 +23,9 @@
 ## Ejemplo
 
 
-```$npm install gitbook-start-ericlucastania```
+```$npm install gitbook-start-elt```
 
-```$ gitbook-start -d MiLibro -a Jack```
+```$ gitbook-start --dir "midirectorio" -a "autor" ``
 
 
 
