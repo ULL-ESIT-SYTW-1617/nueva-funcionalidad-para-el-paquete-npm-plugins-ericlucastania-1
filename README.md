@@ -31,13 +31,10 @@
 
 ## Enlaces interesantes 
  
-* [Repositorio de la práctica](https://github.com/ULL-ESIT-SYTW-1617/creacion-de-paquetes-y-modulos-en-nodejs-ericlucastania.git).
-* [Descripción de la práctica.](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/practicas/practicanm.html#práctica-creación-de-un-paquete-npm)
-* [NPM](https://www.npmjs.com/package/gitbook-start-ericlucastania)
+* [Repositorio de la práctica](https://github.com/ULL-ESIT-SYTW-1617/nueva-funcionalidad-para-el-paquete-npm-plugins-ericlucastania-1).
+* [Descripción de la práctica.](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/practicas/practicaplugin.html)
+* [NPM](https://www.npmjs.com/package/gitbook-start-elt)
 
-## Datos de partida
-
-* [Repositorio Inicial Templates](https://github.com/enten/gitbook-boilerplate) 
 
 ## Componentes del grupo de trabajo
 
