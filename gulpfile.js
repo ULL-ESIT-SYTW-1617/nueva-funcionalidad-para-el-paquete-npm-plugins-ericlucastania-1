@@ -1,7 +1,4 @@
 var gulp = require('gulp');
-var ejs = require("gulp-ejs");
-//var dep = require('dep');
-
 var shell = require('gulp-shell');
  
  
@@ -25,6 +22,7 @@ var paths = {
    ]
    
 };
+
 gulp.task('deploy',shell.task([
   'npm run deploy'
 ]));
@@ -49,12 +47,3 @@ gulp.task('watch', function(){
    gulp.watch(paths.bookjson,['inst']);
   
 });
-
- 
- /*
- 
- gulp.task('deploy-iaas', function(){
-     gulp.src("./bin/script")
-        .pipe()
-        
-        */

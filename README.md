@@ -2,39 +2,46 @@
 
 
 
-## Descripción de la práctica.
+# Descripción
 
-   El objetivo de la práctica es llegar a que el usuario puede descargar el plugin gitbook-start-plugin-iaas-ull-es-ericlucastania y el paquete gitbook-start-elt de manera local en su maquina.El usuario tiene que tener en cuenta que tiene que tener previamente un cuenta en el iaas y tener un clone de su repositorio. Una vez que se tiene claro los anteriores comenzamos a explicar los pasos llevar a cabo el correcto funcionamiento de la práctica
+Creación de un libro automatizado, nuestro paquete te ayudará a optimizar tiempo en la creación
+de una estructura para gitbook.
 
+
+# Enlace al plugin
+
+[Plugin](https://github.com/ULL-ESIT-SYTW-1617/gitbook-start-heroku-ericlucastania.git).
 
 ## Opciones
 
     gitbook-start [OPTIONS]
-  
-		"--dir nombre del directorio a crear node gitbook-star --dir miDirectorio\n"+
-		"-a autor del libro a crear node gitbook-star -a AutorDelLibro\n"+
-		"-e email del autor del libro node gitbook-star -e eric.ramos.suarez@gmail.com\n"+
-		"-r repositorio github contra el que se va a trabajar -r nameRepo\n"+
-		"-v muestra la version del paquete gitbook-start -v\n"+
-		"-d --deploy deploy en el que se quiera ejecutar gitbook-star -d iaas\n"+
-        "-h muestra ayuda sobre las opciones disponibles\n");
+        -d nombre del directorio a crear node gitbook-star -d miDirectorio
+        -a autor del libro a crear node gitbook-star -a AutorDelLibro
+        -r repositorio github contra el que se va a trabajar -r github.com/repo.git
+        -i direccion a la que se pueden reportar los bugs (en forma de issues de github) -i github.com/repo/issues
+        -f url de la homepage del libro -f github.com/repo#readme.md
+        -w direccion web de la wiki en github -w github.com/repo.wiki.git
+        -h muestra ayuda sobre las opciones disponibles
 
 
 ## Ejemplo
 
 
-```$npm install gitbook-start-elt```
+```$npm install gitbook-start-ericlucastania```
 
-```$ gitbook-start --dir "midirectorio" -a "autor" ``
+```$ gitbook-start -d MiLibro -a Jack```
 
 
 
 ## Enlaces interesantes 
  
-* [Repositorio de la práctica](https://github.com/ULL-ESIT-SYTW-1617/nueva-funcionalidad-para-el-paquete-npm-plugins-ericlucastania-1).
-* [Descripción de la práctica.](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/practicas/practicaplugin.html)
-* [NPM](https://www.npmjs.com/package/gitbook-start-elt)
+* [Repositorio de la práctica](https://github.com/ULL-ESIT-SYTW-1617/creacion-de-paquetes-y-modulos-en-nodejs-ericlucastania.git).
+* [Descripción de la práctica.](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/practicas/practicanm.html#práctica-creación-de-un-paquete-npm)
+* [NPM](https://www.npmjs.com/package/gitbook-start-ericlucastania)
 
+## Datos de partida
+
+* [Repositorio Inicial Templates](https://github.com/enten/gitbook-boilerplate) 
 
 ## Componentes del grupo de trabajo
 

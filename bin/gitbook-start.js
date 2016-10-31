@@ -1,226 +1,52 @@
 #!/usr/bin/env node
 
 
-
-var path = require('path');
-var ejs = require('ejs');
+//Paquetes DEPENDECIES
 var fs = require('fs-extra');
+var path = require('path');
 var argv = require('minimist')(process.argv.slice(2));
-var pck = require(path.join(__dirname, '..','package.json'));
 var gitConfig = require('git-config');
 
 
-var re = /.ejs/g;
-var replugin = /^gitbook-start-plugin/g;
-var de = argv.d || argv.deploy;
-	
+// RUTA ACTUAL
 
-var del = 'gitbook-start-plugin-'+ de;
-var dep = new RegExp(del);
-//Rutas interesantes
 var direct = process.cwd() + '/'; //Actual,desde donde se ejecuta el script
 
-var rutaTemplate = path.join(__dirname, '..','template');
-var rutaModulesGlobal = path.join(__dirname, '..','..');
-var rutaModulesLocal = path.join(direct,'node_modules');
+//Modulos distribuidos
 
-//Cosas de Tania
-var opcionesValidas = ['d', 'a', 'r','dir','deploy','e','v'];
-var flag = true;
-
-//variables funcionamiento
-var sum=0;
+var comprobar = require('./comprobarMinimist.js');
+var renderTemplate = require('./renderTemplate.js');
+var iniDeplo = require('./initializes&deploys.js');
 var defaultname,defaultemail;
 
-
-
-
-
-// Empezamos comprobando las opciones validas
-function comprobarOpcion(opc) {
-for (var i=0; i<opcionesValidas.length; i++) {
-	if ((opcionesValidas[i] == opc))
-		return true;
-}
-return false;
-}
-
-// Recorremos argumentos con minimist
-for (var i in argv) {
-if ((sum !=0) && (sum%2 == 0)) {
-	if(comprobarOpcion(i)==false){
-		flag = false;
-		break;
-	}
-}
-sum += 2;
-}
-
-
-
-
-
-gitConfig(function (err, config) {
 	
+
+gitConfig(function (err, config) { //PARA RECOGER OPCIONES POR DEFECTO
 	if(err)
 		console.log(err);
+		
+		
 	//opciones por defecto GitHub	
 	defaultname = config.user.name;
 	defaultemail = config.user.email;
 	
 	
-	
-	if (flag){
-		
-			
-		// Si la opcion es -v,imprime version
-		if(argv.v){
-			console.log(pck.version);
-		}
-		
-	
-		//ejecutar todos los initialize globales y locales si no hay argumentos
-		if(Object.keys(argv).length == 1 ||argv.dir){
-			
-			var rutas = (ruta) => {
-				var correctNames = [];
-				try {
-		    		var names = fs.readdirSync(ruta);
-				}
-				catch(err) {
-				    
-				}
-				
-				if(names){
-					for (var i in names){
-						if(names[i].match(replugin)){
-							correctNames.push(names[i]);
-						}
-					}
-				}
-				if(correctNames){
-					for(var j in correctNames){
-						var requireNames = require(correctNames[j]);
-						requireNames.initialize();
-					}
-				}
-				
-			};
-			rutas(rutaModulesGlobal);
-			rutas(rutaModulesLocal);
-		
-		
-			// Creamos la carpeta
-			
-			var dir = argv.dir || defaultname;
-			fs.mkdirsSync(direct + dir);
-			
-			//Ver los nombres de los archivos dentro de las carpetas
-			var names = fs.readdirSync(rutaTemplate);
-			
-			var recursive = (names,folder) => {
-				for (var i in names){
-				
-					if(names[i].match(re)){
-					
-						//Renderizamos el fichero
-						var data = ejs.renderFile(rutaTemplate + '/' + folder + names[i],{
-							
-							autor:{
-								name: argv.a || defaultname,
-								email: argv.e || defaultemail
-							}
-							
-						},(err,data) => {
-							if(err){
-								throw err;
-								
-							} else{
-								return data;
-								
-							}
-						});
-						
-						//Sustituimos el nombre, para quitarle la extensión ejs
-						
-						var newstr = names[i].replace(re, '');
-					   
-						fs.writeFile(direct + dir + '/' + folder + newstr, data, (err) => {
-						  if (err) throw err;
-						});
-					}
-					else{
-						fs.mkdirsSync(direct + dir + '/' +names[i]);
-						recursive(fs.readdirSync(rutaTemplate + '/' + names[i]),names[i] + '/');
-					}
-				}
-			};
-			
-			recursive(names,'');
-		}
-		//deploys
-		else if(de){
-			var correctNames = [];
-			var rutasDeploy = (ruta) => {
-				try {
-		    		var names = fs.readdirSync(ruta);
-				}
-				catch(err) {
-					console.log("No se ha encontrado plugins de despliegue con este nombre. Posibles fallos:\n"+
-						"  Sitúese en el libro.\n"+
-						"  Compruebe que hay plugins instalados\n");
-				}
-				try{
-					if(names){
-						for (var i in names){
-							if(names[i].match(dep)){
-								correctNames.push(names[i]);
-							}
-						
-						}
-					}
-				}
-				catch(error){
-					console.log("No se ha encontrado plugins de despliegue con este nombre. Posibles fallos:\n"+
-						"  Sitúese en el libro.\n"+
-						"  Compruebe que hay plugins instalados\n");
-				}
-				
-				if(correctNames){
-					for(var j in correctNames){
-						try {
-				    		var requireNames = require(correctNames[j]);
-				    		requireNames.deploy();
-						}
-						catch(err) {
-							console.log("No se ha podido encontrar el modulo");
-						}
-					}
-				}
-				
-				
-			};
-			rutasDeploy(rutaModulesGlobal);
-		}
-		
+	if (comprobar.comp(argv)){
+		if(argv.d || argv.deploy){iniDeplo.execute(path,direct,fs,argv.d,argv.deploy);}
+		renderTemplate.rend(argv,path,fs,defaultname,defaultemail,direct);
 	}
-	
 	else {
-		console.log("gitbook-start [OPTIONS]\n"+
-		"--dir nombre del directorio a crear node gitbook-star --dir miDirectorio\n"+
-		"-a autor del libro a crear node gitbook-star -a AutorDelLibro\n"+
-		"-e email del autor del libro node gitbook-star -e eric.ramos.suarez@gmail.com\n"+
-		"-r repositorio github contra el que se va a trabajar -r nameRepo\n"+
-		"-v muestra la version del paquete gitbook-start -v\n"+
-		"-d --deploy deploy en el que se quiera ejecutar gitbook-star -d iaas\n"+
-		"-h muestra ayuda sobre las opciones disponibles\n");
-	}
-	
-	
-	
+			console.log("gitbook-start [OPTIONS]\n"+
+			"--dir nombre del directorio a crear node gitbook-star --dir miDirectorio\n"+
+			"-a autor del libro a crear node gitbook-star -a AutorDelLibro\n"+
+			"-e email del autor del libro node gitbook-star -e eric.ramos.suarez@gmail.com\n"+
+			"-r repositorio github contra el que se va a trabajar -r nameRepo\n"+
+			"-v muestra la version del paquete gitbook-start -v\n"+
+			"-d --deploy deploy en el que se quiera ejecutar gitbook-star -d iaas\n"+
+			"-h muestra ayuda sobre las opciones disponibles\n");
+		}	
+
 
 });
-
-
 	
 
