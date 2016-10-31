@@ -32,6 +32,7 @@ y tener un clone de su repositorio. Una vez que se tiene claro los anteriores as
 ### Instrucciones de uso
 Tenga en cuenta que para que el plugin funcione correctamente debe cambiar algunas cosas en el package.json
 
+
 ![](https://4.bp.blogspot.com/-Jjhh_IM9FAw/WA9EbkzsEoI/AAAAAAAAAoc/84cO_lVXgCYD6ekx1YzSV6LEjsCitH0AACLcB/s1600/iass.png)
 * Deberá poner la IP de su maquina del iaas.
 
@@ -52,6 +53,8 @@ Tenga en cuenta que para que el plugin funcione correctamente debe cambiar algun
 ```npm install```
 
 **8. Ejecuta el gulp creado**
+
+Recuerde que se ejecuta un pull deberá tener clonado primero el repositorio en la máquina del iaas
 
 ```gulp deploy-iaas```
 
