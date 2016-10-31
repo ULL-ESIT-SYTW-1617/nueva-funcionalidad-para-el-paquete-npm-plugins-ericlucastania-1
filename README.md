@@ -8,10 +8,6 @@ Creación de un libro automatizado, nuestro paquete te ayudará a optimizar tiem
 de una estructura para gitbook.
 
 
-# Enlace al plugin
-
-[Plugin](https://github.com/ULL-ESIT-SYTW-1617/gitbook-start-heroku-ericlucastania.git).
-
 ## Opciones
 
     gitbook-start [OPTIONS]
@@ -27,21 +23,18 @@ de una estructura para gitbook.
 ## Ejemplo
 
 
-```$npm install gitbook-start-ericlucastania```
+```$npm install gitbook-start-elt```
 
-```$ gitbook-start -d MiLibro -a Jack```
+```$ gitbook-start -dir MiLibro```
 
 
 
 ## Enlaces interesantes 
  
-* [Repositorio de la práctica](https://github.com/ULL-ESIT-SYTW-1617/creacion-de-paquetes-y-modulos-en-nodejs-ericlucastania.git).
-* [Descripción de la práctica.](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/practicas/practicanm.html#práctica-creación-de-un-paquete-npm)
-* [NPM](https://www.npmjs.com/package/gitbook-start-ericlucastania)
-
-## Datos de partida
-
-* [Repositorio Inicial Templates](https://github.com/enten/gitbook-boilerplate) 
+* [NPM](https://www.npmjs.com/package/gitbook-start-elt)
+* [Enlace al Repositorio de la práctica](https://github.com/ULL-ESIT-SYTW-1617/nueva-funcionalidad-para-el-paquete-npm-plugins-ericlucastania-1)
+* [Enlace a gitbook-start-plugin-iaas-ull-es](https://github.com/ULL-ESIT-SYTW-1617/gitbook-start-plugin-iaas-ull-es-ericlucastania)
+* [Enlace a NPM gitbook-start-plugin-iaas-ull-es](https://www.npmjs.com/package/gitbook-start-plugin-iaas-ull-es-ericlucastania)
 
 ## Componentes del grupo de trabajo
 
@@ -50,22 +43,3 @@ de una estructura para gitbook.
 * [Tania González](https://github.com/tania77)
 
 
-
-
-
-
-
-# Tutorial de como hacer la práctica
-
-## Descripción de la misma
-
-
-
-## Enlaces interesantes 
-
-
-* [Enlace al Repositorio de la práctica](https://github.com/ULL-ESIT-SYTW-1617/nueva-funcionalidad-para-el-paquete-npm-plugins-ericlucastania-1)
-* [Enlace a gitbook-start-plugin-iaas-ull-es](https://github.com/ULL-ESIT-SYTW-1617/gitbook-start-plugin-iaas-ull-es-ericlucastania)
-
-* [Enlace a npm gitbook-start]()
-* [Enlace a npm gitbook-start-plugin-iaas](https://www.npmjs.com/package/gitbook-start-plugin-iaas-ull-es-ericlucastania)
