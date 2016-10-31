@@ -16,7 +16,7 @@ module.exports = {
 		    		var names = fs.readdirSync(ruta);
 				}
 				catch(err) {
-				    
+				    console.log("No se encontró el módulo, vuelva a instalarlo")
 				}
 				
 				if(names){
@@ -36,7 +36,7 @@ module.exports = {
 				
 			};
 			rutas(rutaModulesLocal);
-			rutas(rutaModulesGlobal);
+			//rutas(rutaModulesGlobal);
 			
         },
         
