@@ -11,24 +11,24 @@ y tener un clone de su repositorio. Una vez que se tiene claro los anteriores as
 
 ## Pasos a ejecutar 
 
-**Instala nuestro paquete de forma global**
+**1. Instala nuestro paquete de forma global**
 
 ```npm install -g gitbook-start-elt```
 
-**Instala el plugin del iaas de forma global**
+**2. Instala el plugin del iaas de forma global**
 
 ```npm install -g gitbook-start-plugin-iaas-ull-es-ericlucastania```
 
-**Ejecuta el binario para el render del template**
+**3. Ejecuta el binario para el render del template**
 
 ```gitbook-start -dir Carpeta``` !!Si no ejecutas el -dir se creará una carpeta con tu nombre de usuario
 
-**Entra en la carpeta**
+**4. Entra en la carpeta**
 
 ```shell
 cd Carpeta
 ```
-**Ejecuta el plugin que desees**
+**5. Ejecuta el plugin que desees**
 
 ```gitbook-start -d iaas``` !! También puedes usar la opción --deploy
 
