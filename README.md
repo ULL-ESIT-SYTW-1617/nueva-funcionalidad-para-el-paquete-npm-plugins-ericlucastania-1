@@ -4,8 +4,38 @@
 
 # Descripción
 
-Creación de un libro automatizado, nuestro paquete te ayudará a optimizar tiempo en la creación
-de una estructura para gitbook.
+El objetivo de la práctica es llegar a que el usuario puede descargar el plugin gitbook-start-plugin-iaas-ull-es-ericlucastania y el paquete gitbook-start-elt de manera local en su maquina.El usuario tiene que tener en cuenta que tiene que tener previamente un cuenta en el iaas 
+y tener un clone de su repositorio. Una vez que se tiene claro los anteriores aspectos comenzamos a explicar los pasos llevar a cabo el correcto funcionamiento de la práctica.
+
+
+
+## Pasos a ejecutar 
+
+**Instala nuestro paquete de forma global**
+
+```npm install -g gitbook-start-elt```
+
+**Instala el plugin del iaas de forma global**
+
+```npm install -g gitbook-start-plugin-iaas-ull-es-ericlucastania```
+
+**Ejecuta el binario para el render del template**
+
+```gitbook-start -dir Carpeta``` !!Si no ejecutas el -dir se creará una carpeta con tu nombre de usuario
+
+**Entra en la carpeta**
+
+```shell
+cd Carpeta
+```
+**Ejecuta el plugin que desees**
+
+```gitbook-start -d iaas``` !! También puedes usar la opción --deploy
+
+
+Una vez ejecutado estos comandos se te lanzará el initialize del módulo,
+el initialize crea una tarea en el gulp para realizar el deploy. Además de crearte una clave
+pública y privada para conectarte a la máquina del iaas.
 
 
 ## Opciones
