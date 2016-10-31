@@ -28,15 +28,32 @@ y tener un clone de su repositorio. Una vez que se tiene claro los anteriores as
 ```shell
 cd Carpeta
 ```
-**5. Ejecuta el plugin que desees**
+
+**5. Cambia los datos del package.json que tiene el directorio que has creado en nuestro caso de llama Carpeta
+
+## Instrucciones de uso
+Tenga en cuenta que para que el plugin funcione correctamente debe cambiar algunas cosas en el package.json
+
+![](https://4.bp.blogspot.com/-Jjhh_IM9FAw/WA9EbkzsEoI/AAAAAAAAAoc/84cO_lVXgCYD6ekx1YzSV6LEjsCitH0AACLcB/s1600/iass.png)
+* Deberá poner la IP de su maquina del iaas.
+
+![](https://4.bp.blogspot.com/-qb-f3r0EpJ0/WA9IiJ-XjjI/AAAAAAAAAoo/aDSCiupjFeIOQ3WumKTtT5FIKK9FtxU1wCLcB/s1600/ip.png)
+* Para que el pull funcione correctamente en su máquina, deberá cambiar la ruta que aparece en command por la suya.
+
+![](https://3.bp.blogspot.com/-aLZatT4SRmI/WA9IiHbUGXI/AAAAAAAAAos/9-J7a9pH7ZkLwDPSqh_TPV74Svitx2xlQCLcB/s1600/command.png)
+* Tenga en cuenta que si el usuario de su máquina no es "usuario" deberá también cambiar esto en el fichero package.json
+
+![](https://4.bp.blogspot.com/-Ls3DTGAHQ7E/WA9IjVnGOqI/AAAAAAAAAow/BANS15EoXqYuVwIChWcSqZvqlkcLxtMRQCLcB/s1600/usuario.png)
+
+**6. Ejecuta el plugin que desees**
 
 ```gitbook-start -d iaas``` !! También puedes usar la opción --deploy
 
-**6. Ejecuta el comando npm install para instalar las dependencias**
+**7. Ejecuta el comando npm install para instalar las dependencias**
 
 ```npm install```
 
-**7. Ejecuta el gulp creado**
+**8. Ejecuta el gulp creado**
 
 ```gulp deploy-iaas```
 
