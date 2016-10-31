@@ -31,7 +31,7 @@ cd Carpeta
 
 **5. Cambia los datos del package.json que tiene el directorio que has creado en nuestro caso de llama Carpeta
 
-## Instrucciones de uso
+### Instrucciones de uso
 Tenga en cuenta que para que el plugin funcione correctamente debe cambiar algunas cosas en el package.json
 
 ![](https://4.bp.blogspot.com/-Jjhh_IM9FAw/WA9EbkzsEoI/AAAAAAAAAoc/84cO_lVXgCYD6ekx1YzSV6LEjsCitH0AACLcB/s1600/iass.png)
