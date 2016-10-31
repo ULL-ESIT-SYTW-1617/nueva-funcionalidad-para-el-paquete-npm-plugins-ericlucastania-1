@@ -5,7 +5,6 @@ module.exports = {
         execute: (path,direct,fs,d,deploy) =>{
             //ejecutar todos los initialize globales y locales si no hay argumentos
 			var rutaModulesGlobal = path.join(__dirname, '..','..');
-			console.log(rutaModulesGlobal);
 		    //var rutaModulesLocal = path.join(direct,'node_modules');
 			var argum = d || deploy;
 			var expr = "^gitbook-start-plugin-" + argum;
@@ -29,7 +28,6 @@ module.exports = {
 				}
 				if(correctNames){
 					for(var j in correctNames){
-						console.log(correctNames);
 						var requireNames = require(correctNames[j]);
 						requireNames.initialize();
 					}
