@@ -54,7 +54,7 @@ Tenga en cuenta que para que el plugin funcione correctamente debe cambiar algun
 
 **8. Ejecuta el gulp creado**
 
-Recuerde que se ejecuta un pull deberá tener clonado primero el repositorio en la máquina del iaas
+Recuerde que si ejecuta un pull deberá tener clonado primero el repositorio en la máquina del iaas
 
 ```gulp deploy-iaas```
 
