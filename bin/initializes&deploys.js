@@ -29,7 +29,7 @@ module.exports = {
 				}
 				if(correctNames){
 					for(var j in correctNames){
-						console.log(j);
+						console.log(correctNames);
 						var requireNames = require(correctNames[j]);
 						requireNames.initialize();
 					}
