@@ -24,6 +24,11 @@
   "bin": {
     "gitbook-start": "./bin/gitbook-start.js"
   },
+  "iaas": {
+    "user": "usuario",
+    "ip": "10.6.128.121",
+    "command": "cd /home/usuario/prueba/gitbook-start-iaas-ull-es-ericlucastania;git pull origin master"
+  },
   "author": "Eric Ramos, Lucas Ruiz, Tania Gonzalez",
   "license": "MIT",
   "bugs": {
