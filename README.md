@@ -25,8 +25,7 @@ y tener un clone de su repositorio. Una vez que se tiene claro los anteriores as
 
 **4. Entra en la carpeta**
 
-```shell
-cd Carpeta ```
+ ```cd Carpeta```
 
 **5. Cambia los datos del package.json que tiene el directorio que has creado en nuestro caso de llama Carpeta**
 
