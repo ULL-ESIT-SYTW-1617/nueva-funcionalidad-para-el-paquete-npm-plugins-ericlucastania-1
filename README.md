@@ -32,11 +32,19 @@ cd Carpeta
 
 ```gitbook-start -d iaas``` !! También puedes usar la opción --deploy
 
+**6. Ejecuta el comando npm install para instalar las dependencias**
 
-Una vez ejecutado estos comandos se te lanzará el initialize del módulo,
-el initialize crea una tarea en el gulp para realizar el deploy. Además de crearte una clave
-pública y privada para conectarte a la máquina del iaas.
+```npm install```
 
+**7. Ejecuta el gulp creado**
+
+```gulp deploy-iaas```
+
+#### Explicación
+
+Cunado se ejecuta el gitbook-start -d iaas se te lanzará el initialize del módulo,
+el initialize crea una tarea en el gulp para realizar el deploy. Además de guardarte el paquete
+elegido en el package.json.
 
 ## Opciones
 
