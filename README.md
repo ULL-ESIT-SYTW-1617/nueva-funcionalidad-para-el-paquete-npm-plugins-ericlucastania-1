@@ -13,15 +13,15 @@ y tener un clone de su repositorio. Una vez que se tiene claro los anteriores as
 
 **1. Instala nuestro paquete de forma global**
 
-```npm install -g gitbook-start-elt```
+```sudo npm install -g gitbook-start-elt```
 
 **2. Instala el plugin del iaas de forma global**
 
-```npm install -g gitbook-start-plugin-iaas-ull-es-ericlucastania```
+```sudo npm install -g gitbook-start-plugin-iaas-ull-es-ericlucastania```
 
 **3. Ejecuta el binario para el render del template**
 
-```gitbook-start -dir Carpeta``` !!Si no ejecutas el -dir se creará una carpeta con tu nombre de usuario
+```gitbook-start --dir Carpeta``` !!Si no ejecutas el -dir se creará una carpeta con tu nombre de usuario
 
 **4. Entra en la carpeta**
 
