@@ -20,7 +20,7 @@ y tener un clone de su repositorio. Una vez que se tiene claro los anteriores as
 
 **3. Ejecuta el binario para el render del template**
 
-```gitbook-start -dir Carpeta``` !!Si no ejecutas el -dir se creará una carpeta con tu nombre de usuario
+```gitbook-start --dir Carpeta``` !!Si no ejecutas el --dir se creará una carpeta con tu nombre de usuario
 
 **4. Entra en la carpeta**
 
