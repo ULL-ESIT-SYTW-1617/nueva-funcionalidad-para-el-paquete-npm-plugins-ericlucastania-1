@@ -30,6 +30,7 @@ y tener un clone de su repositorio. Una vez que se tiene claro los anteriores as
 
 
 ### Instrucciones de uso
+
 Tenga en cuenta que para que el plugin funcione correctamente debe cambiar algunas cosas en el package.json
 
 
