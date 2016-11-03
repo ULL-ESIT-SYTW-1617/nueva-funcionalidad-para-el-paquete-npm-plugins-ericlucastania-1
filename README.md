@@ -81,8 +81,8 @@ elegido en el package.json.
 * [NPM](https://www.npmjs.com/package/gitbook-start-elt)
 * [Repositorio de la práctica](https://github.com/ULL-ESIT-SYTW-1617/nueva-funcionalidad-para-el-paquete-npm-plugins-ericlucastania-1)
 * [Descripción de la práctica](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/practicas/practicaplugin.html)
-* [Gitbook-start-iaas-ull-es](https://github.com/ULL-ESIT-SYTW-1617/gitbook-start-iaas-ull-es-ericlucastania)
-* [NPM gitbook-start-plugin-iaas-ull-es](https://www.npmjs.com/package/gitbook-start-plugin-iaas-ull-es-ericlucastania)
+* [PLUGIN IAAS](https://github.com/ULL-ESIT-SYTW-1617/gitbook-start-iaas-ull-es-ericlucastania)
+* [NPM PLUGIN IAAS](https://www.npmjs.com/package/gitbook-start-plugin-iaas-ull-es-ericlucastania)
 
 ## Componentes del grupo de trabajo
 
