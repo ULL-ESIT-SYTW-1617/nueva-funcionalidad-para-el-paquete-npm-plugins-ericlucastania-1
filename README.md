@@ -50,6 +50,11 @@ Tenga en cuenta que para que el plugin funcione correctamente debe cambiar algun
 ```gitbook-start -d iaas``` !! También puedes usar la opción --deploy
 
 
+**7. Ejecuta un npm install**
+
+```npm install```
+
+
 **7. Ejecuta el gulp creado**
 
 Recuerde que si ejecuta un pull deberá tener clonado primero el repositorio en la máquina del iaas
